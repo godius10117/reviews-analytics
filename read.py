@@ -35,6 +35,23 @@ for d in data:
 print('一共有', len(good),'筆資料提到good')
 print(good[0])
 
+#list comprehension 清單快寫法；同上方good篩選
+good = [d for d in data if 'good' in d]
+#for 前面可放篩選的留言d,凡有good則印出留言
+#或數字1，凡有good則印出1
+#或合併字串d+'123'凡有good則印出留言+'123'
+#或運算，如：
+bad = ['bad'in d for d in data]
+#即印出100萬筆留言，留言出現bad，則為True,否則為False
+print(bad)
+#等同下方寫法：
+bad = []
+for d in data:
+    bad.append('bad' in d)
+
+
+
+
 
 
 
