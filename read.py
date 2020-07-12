@@ -17,6 +17,18 @@ for d in data:
 #print('所有留言總長度為',sum_len)
 print('每筆留言平均長度為', sum_len/len(data))
 
+#篩選內容長度小於100的留言
+new = []
+for d in data: #從存放100萬筆留言中,再提取出每1筆留言
+	if len(d) < 100:
+		new.append(d)
+print('一共有', len(new),'筆留言長度小於100')
+
+print(new[0])
+print(new[1])
+
+
+
 
 
 
